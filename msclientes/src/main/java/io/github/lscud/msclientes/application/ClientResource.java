@@ -3,6 +3,7 @@ package io.github.lscud.msclientes.application;
 import io.github.lscud.msclientes.application.representation.ClientSaveRequest;
 import io.github.lscud.msclientes.domain.Client;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
@@ -12,12 +13,14 @@ import java.net.URI;
 @RestController
 @RequestMapping("clientes")
 @RequiredArgsConstructor //recurso do lombok dispensa uso do @Autowired
+@Slf4j
 public class ClientResource {
 
     private final ClientService service;
 
     @GetMapping
     public String status(){
+        log.info("obtendo o status do microservice de clientes");
         return "OK";
     }
 
