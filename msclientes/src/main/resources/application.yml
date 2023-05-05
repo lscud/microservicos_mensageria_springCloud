@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: msclientes
+
+server:
+  port: 0  #dessa forma será gerado as instancias em portas aleatórias. Esse 0 significa que vai subir em uma porta aleatória
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka #aqui estou dizendo onde esta o eureka onde quero me registrar
+  instance:
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
