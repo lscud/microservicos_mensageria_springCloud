@@ -11,9 +11,9 @@ public class CardSaveRequest {
     private String name;
     private FlagCard flag;
     private BigDecimal rent;
-    private BigDecimal limit;
+    private BigDecimal limite;
 
     public Cards toModel(){
-        return new Cards(name, flag, rent, limit);
+        return new Cards(name, flag, rent, limite);
     }
 }

@@ -23,6 +23,7 @@ public class MscloudgatewayApplication {
 				.routes()
 				//definir as rotas
 				.route(r -> r.path("/clientes/**").uri("lb://msclientes")) //toda vez que eu fizer requisição para "/clientes/**" o roteador irá direcionar para "lb://msclientes"
+				.route(r -> r.path("/cartoes/**").uri("lb://mscartoes"))
 				//--------------
 				.build();
 

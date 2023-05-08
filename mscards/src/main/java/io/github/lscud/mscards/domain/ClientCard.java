@@ -19,6 +19,7 @@ public class ClientCard {
     @JoinColumn(name = "id_cartao")
     private Cards cards;
 
+    @Column(name = "card_limit")
     private BigDecimal limit;
 
 

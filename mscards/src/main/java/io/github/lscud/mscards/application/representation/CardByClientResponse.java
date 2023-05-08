@@ -17,6 +17,9 @@ public class CardByClientResponse {
     private BigDecimal limitAproved;
 
     public static CardByClientResponse fromModel(ClientCard model){
-        return new CardByClientResponse(model.getCards().getName(), model.getCards().getFlag().toString(),model.getLimit());
+        return new CardByClientResponse(
+                model.getCards().getName(),
+                model.getCards().getFlag().toString(),
+                model.getLimit());
     }
 }

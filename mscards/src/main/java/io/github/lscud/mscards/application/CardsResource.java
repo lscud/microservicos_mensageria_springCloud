@@ -44,7 +44,9 @@ public class CardsResource {
     @GetMapping(params = "cpf")
     public ResponseEntity<List<CardByClientResponse>> getCardByClient(@RequestParam("cpf") String cpf){
         List<ClientCard> list = clientCardService.listCardByCpf(cpf);
-        List<CardByClientResponse> resultlist = list.stream().map(CardByClientResponse::fromModel).collect(Collectors.toList());
+        List<CardByClientResponse> resultlist = list.stream()
+                .map(CardByClientResponse::fromModel)
+                .collect(Collectors.toList());
         return ResponseEntity.ok(resultlist);
     }
 
