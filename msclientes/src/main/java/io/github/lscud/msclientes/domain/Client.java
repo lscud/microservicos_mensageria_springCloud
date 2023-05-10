@@ -17,12 +17,12 @@ public class Client {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String cpf;
-    private String nome;
+    private String name;
     private Integer idade;
 
-    public Client(String cpf, String nome, Integer idade) {
+    public Client(String cpf, String name, Integer idade) {
         this.cpf = cpf;
-        this.nome = nome;
+        this.name = name;
         this.idade = idade;
     }
 }
