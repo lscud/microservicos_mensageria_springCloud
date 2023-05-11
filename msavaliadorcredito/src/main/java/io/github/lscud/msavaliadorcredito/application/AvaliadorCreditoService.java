@@ -2,10 +2,12 @@ package io.github.lscud.msavaliadorcredito.application;
 
 import feign.FeignException;
 import io.github.lscud.msavaliadorcredito.application.ex.DataClientNotFoundException;
+import io.github.lscud.msavaliadorcredito.application.ex.ErroSolicitacaoCartaoException;
 import io.github.lscud.msavaliadorcredito.application.ex.ErrorComunicationMicroservicesException;
 import io.github.lscud.msavaliadorcredito.domain.model.*;
 import io.github.lscud.msavaliadorcredito.infra.clients.CardResourceClient;
 import io.github.lscud.msavaliadorcredito.infra.clients.ClienteResourceClient;
+import io.github.lscud.msavaliadorcredito.infra.mqueue.SolicitacaoEmissaoCartaoPublisher;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -13,6 +15,7 @@ import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
 import java.util.List;
+import java.util.UUID;
 import java.util.stream.Collectors;
 
 @Service
@@ -21,6 +24,8 @@ public class AvaliadorCreditoService {
 
     private final ClienteResourceClient clientesClient;
     private final CardResourceClient cardClient;
+    private final SolicitacaoEmissaoCartaoPublisher emissaoCartaoPublisher;
+
 
     public SituacaoCliente obterSituacaoCliente(String cpf) throws DataClientNotFoundException, ErrorComunicationMicroservicesException{
         try {
@@ -78,6 +83,16 @@ public class AvaliadorCreditoService {
                 throw new DataClientNotFoundException();
             }
             throw new ErrorComunicationMicroservicesException(e.getMessage(), status);
+        }
+    }
+
+    public ProtocoloSolicitacaoCartao solicitarEmissaoCartao(DadosSolicitacaoEmissaoCartao dados){
+        try{
+            emissaoCartaoPublisher.solicitarCartao(dados);
+            var protocolo = UUID.randomUUID().toString();
+            return new ProtocoloSolicitacaoCartao(protocolo);
+        } catch(Exception e){
+            throw new ErroSolicitacaoCartaoException(e.getMessage());
         }
     }
 }

@@ -1,10 +1,9 @@
 package io.github.lscud.msavaliadorcredito.application;
 
 import io.github.lscud.msavaliadorcredito.application.ex.DataClientNotFoundException;
+import io.github.lscud.msavaliadorcredito.application.ex.ErroSolicitacaoCartaoException;
 import io.github.lscud.msavaliadorcredito.application.ex.ErrorComunicationMicroservicesException;
-import io.github.lscud.msavaliadorcredito.domain.model.DataTesting;
-import io.github.lscud.msavaliadorcredito.domain.model.ReturnTestClient;
-import io.github.lscud.msavaliadorcredito.domain.model.SituacaoCliente;
+import io.github.lscud.msavaliadorcredito.domain.model.*;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -22,7 +21,7 @@ public class AvaliadorCreditoController {
     }
 
     @GetMapping(value = "situacao-cliente", params = "cpf")
-    public ResponseEntity consultaSituacaoCliente(@RequestParam("cpf") String cpf){
+    public ResponseEntity consultarSituacaoCliente(@RequestParam("cpf") String cpf){
         try {
             SituacaoCliente situacaoCliente = avaliadorCreditoSerivce.obterSituacaoCliente(cpf);
             return  ResponseEntity.ok(situacaoCliente);
@@ -42,6 +41,16 @@ public class AvaliadorCreditoController {
             return ResponseEntity.notFound().build();
         } catch (ErrorComunicationMicroservicesException e) {
             return ResponseEntity.status(HttpStatus.resolve(e.getStatus())).body(e.getMessage());
+        }
+    }
+
+    @PostMapping("solicitacoes-cartao")
+    public ResponseEntity solicitarCartao(@RequestBody DadosSolicitacaoEmissaoCartao dados){
+        try{
+            ProtocoloSolicitacaoCartao protocoloSolicitacaoCartao = avaliadorCreditoSerivce.solicitarEmissaoCartao(dados);
+            return ResponseEntity.ok(protocoloSolicitacaoCartao);
+        }catch (ErroSolicitacaoCartaoException e){
+            return ResponseEntity.internalServerError().body(e.getMessage());
         }
     }
 

@@ -1,13 +1,23 @@
 spring:
   application:
     name: mscartoes
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
 
 server:
-  port: 0 #sera gerado aleatorio (pratico para criar mais instancias da mesma aplicação)
+  port: 0 #sera gerado aleatorio (pratico para criar mais instancias da mesma aplicaï¿½ï¿½o)
 
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka #apontando onde esta eureka
   instance:
-    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}} #estou nomeando a isntancia do meu mciroservico. Da forma que foi feito será criado nomes randomicos
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}} #estou nomeando a isntancia do meu mciroservico. Da forma que foi feito serï¿½ criado nomes randomicos
+
+
+mq:
+  queues:
+    emissao-cartoes: emissao-cartoes
