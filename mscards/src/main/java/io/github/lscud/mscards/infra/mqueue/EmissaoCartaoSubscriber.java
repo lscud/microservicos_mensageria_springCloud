@@ -8,12 +8,14 @@ import io.github.lscud.mscards.domain.DadosSolicitacaoEmissaoCartao;
 import io.github.lscud.mscards.infra.repository.CardRepository;
 import io.github.lscud.mscards.infra.repository.ClientCardRepository;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.messaging.handler.annotation.Payload;
 import org.springframework.stereotype.Component;
 
 @Component
 @RequiredArgsConstructor
+@Slf4j
 public class EmissaoCartaoSubscriber {
 
     private final CardRepository cardRepository;
@@ -24,8 +26,10 @@ public class EmissaoCartaoSubscriber {
 //        System.out.println(payload);
         try {
             var mapper = new ObjectMapper();
+
             DadosSolicitacaoEmissaoCartao dados = mapper.readValue(payload, DadosSolicitacaoEmissaoCartao.class);
             Cards cartao = cardRepository.findById(dados.getIdCartao()).orElseThrow();
+
             ClientCard clientCard = new ClientCard();
             clientCard.setCards(cartao);
             clientCard.setCpf(dados.getCpf());
@@ -33,8 +37,8 @@ public class EmissaoCartaoSubscriber {
 
             clientCardRepository.save(clientCard);
 
-        }catch(JsonProcessingException e){
-            e.printStackTrace();
+        }catch(Exception e){
+            log.error("Erro ao receber solicitacao de emissao de cartao: {}", e.getMessage());
         }
     }
 }
