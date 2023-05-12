@@ -1,0 +1,40 @@
+2023-05-12 13:46:11.677  INFO 30344 --- [restartedMain] i.g.l.m.MsavaliadorcreditoApplication    : Starting MsavaliadorcreditoApplication using Java 19.0.2 on LuisScudeler with PID 30344 (C:\temp\IntelliJ_Projects\Microservicos_Mensageria_SpringCloud\msavaliadorcredito\target\classes started by luiss in C:\temp\IntelliJ_Projects\Microservicos_Mensageria_SpringCloud\msavaliadorcredito)
+2023-05-12 13:46:11.680  INFO 30344 --- [restartedMain] i.g.l.m.MsavaliadorcreditoApplication    : No active profile set, falling back to 1 default profile: "default"
+2023-05-12 13:46:11.777  INFO 30344 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-05-12 13:46:11.778  INFO 30344 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-05-12 13:46:14.580  INFO 30344 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=a72abe45-9172-3bd2-b737-11c757bfa580
+2023-05-12 13:46:15.381  INFO 30344 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2023-05-12 13:46:15.397  INFO 30344 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-05-12 13:46:15.397  INFO 30344 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-05-12 13:46:15.717  INFO 30344 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-05-12 13:46:15.717  INFO 30344 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3938 ms
+2023-05-12 13:46:16.296  INFO 30344 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-05-12 13:46:16.401  INFO 30344 --- [restartedMain] o.s.c.openfeign.FeignClientFactoryBean   : For 'msclientes' URL not provided. Will try picking an instance via load-balancing.
+2023-05-12 13:46:16.556  INFO 30344 --- [restartedMain] o.s.c.openfeign.FeignClientFactoryBean   : For 'mscartoes' URL not provided. Will try picking an instance via load-balancing.
+2023-05-12 13:46:19.826  INFO 30344 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2023-05-12 13:46:19.930  WARN 30344 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2023-05-12 13:46:19.947  INFO 30344 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 17 endpoint(s) beneath base path '/actuator'
+2023-05-12 13:46:20.067  INFO 30344 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 53532 (http) with context path ''
+2023-05-12 13:46:20.069  INFO 30344 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 53532
+2023-05-12 13:46:20.082  INFO 30344 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2023-05-12 13:46:20.313  INFO 30344 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2023-05-12 13:46:20.327  INFO 30344 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-05-12 13:46:20.389  INFO 30344 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2023-05-12 13:46:20.389  INFO 30344 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2023-05-12 13:46:20.389  INFO 30344 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2023-05-12 13:46:20.390  INFO 30344 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2023-05-12 13:46:20.390  INFO 30344 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2023-05-12 13:46:20.390  INFO 30344 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2023-05-12 13:46:20.390  INFO 30344 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2023-05-12 13:46:21.143  INFO 30344 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2023-05-12 13:46:21.149  INFO 30344 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2023-05-12 13:46:21.153  INFO 30344 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2023-05-12 13:46:21.163  INFO 30344 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1683909981161 with initial instances count: 2
+2023-05-12 13:46:21.165  INFO 30344 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application MSAVALIADORCREDITO with eureka with status UP
+2023-05-12 13:46:21.167  INFO 30344 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1683909981167, current=UP, previous=STARTING]
+2023-05-12 13:46:21.169  INFO 30344 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MSAVALIADORCREDITO/msavaliadorcredito:c1494be2e7a0a38d293c8227490c327e: registering service...
+2023-05-12 13:46:21.323  INFO 30344 --- [restartedMain] i.g.l.m.MsavaliadorcreditoApplication    : Started MsavaliadorcreditoApplication in 10.409 seconds (JVM running for 12.421)
+2023-05-12 13:46:21.353  INFO 30344 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MSAVALIADORCREDITO/msavaliadorcredito:c1494be2e7a0a38d293c8227490c327e - registration status: 204
+2023-05-12 13:46:47.787  INFO 30344 --- [http-nio-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-12 13:46:47.788  INFO 30344 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-05-12 13:46:47.793  INFO 30344 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
