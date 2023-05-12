@@ -12,5 +12,9 @@ FROM openjdk:11
 WORKDIR /app
 #Copia o arquivo jar que está no build acima
 COPY --from=build ./app/target/*.jar ./app.jar
+#definindo as variaveis de ambiente
+ARG RABBITMQ_SERVER=rabbitmq
+ARG EUREKA_SERVER=teste-eureka
+
 #Executa o arquivo jar
 ENTRYPOINT java -jar app.jar
