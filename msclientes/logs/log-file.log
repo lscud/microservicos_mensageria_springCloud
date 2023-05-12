@@ -1,0 +1,47 @@
+2023-05-12 11:47:52.688  INFO 29136 --- [restartedMain] i.g.l.msclientes.MsclientesApplication   : Starting MsclientesApplication using Java 19.0.2 on LuisScudeler with PID 29136 (C:\temp\IntelliJ_Projects\Microservicos_Mensageria_SpringCloud\msclientes\target\classes started by luiss in C:\temp\IntelliJ_Projects\Microservicos_Mensageria_SpringCloud\msclientes)
+2023-05-12 11:47:52.691  INFO 29136 --- [restartedMain] i.g.l.msclientes.MsclientesApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-05-12 11:47:52.767  INFO 29136 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-05-12 11:47:52.768  INFO 29136 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-05-12 11:47:54.043  INFO 29136 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-05-12 11:47:54.210  INFO 29136 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 152 ms. Found 1 JPA repository interfaces.
+2023-05-12 11:47:54.569  INFO 29136 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=59fe224b-eabd-3c1a-9f2f-0f76227ac5df
+2023-05-12 11:47:55.429  INFO 29136 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2023-05-12 11:47:55.439  INFO 29136 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-05-12 11:47:55.439  INFO 29136 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-05-12 11:47:55.754  INFO 29136 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-05-12 11:47:55.755  INFO 29136 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2986 ms
+2023-05-12 11:47:55.974  INFO 29136 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-05-12 11:47:56.231  INFO 29136 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-05-12 11:47:56.246  INFO 29136 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:700d92b3-e287-4a91-ae63-9ab2395845a3'
+2023-05-12 11:47:56.509  INFO 29136 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-05-12 11:47:56.596  INFO 29136 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-05-12 11:47:56.857  INFO 29136 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-05-12 11:47:57.052  INFO 29136 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2023-05-12 11:47:57.666  INFO 29136 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-05-12 11:47:57.679  INFO 29136 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-05-12 11:47:58.325  WARN 29136 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-05-12 11:47:59.384  WARN 29136 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2023-05-12 11:47:59.518  INFO 29136 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2023-05-12 11:47:59.627  WARN 29136 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2023-05-12 11:47:59.646  INFO 29136 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 17 endpoint(s) beneath base path '/actuator'
+2023-05-12 11:47:59.742  INFO 29136 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 52923 (http) with context path ''
+2023-05-12 11:47:59.744  INFO 29136 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 52923
+2023-05-12 11:47:59.754  INFO 29136 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2023-05-12 11:47:59.960  INFO 29136 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2023-05-12 11:47:59.968  INFO 29136 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-05-12 11:48:00.018  INFO 29136 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2023-05-12 11:48:00.019  INFO 29136 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2023-05-12 11:48:00.019  INFO 29136 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2023-05-12 11:48:00.019  INFO 29136 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2023-05-12 11:48:00.019  INFO 29136 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2023-05-12 11:48:00.020  INFO 29136 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2023-05-12 11:48:00.021  INFO 29136 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2023-05-12 11:48:00.698  INFO 29136 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2023-05-12 11:48:00.702  INFO 29136 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2023-05-12 11:48:00.707  INFO 29136 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2023-05-12 11:48:00.718  INFO 29136 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1683902880716 with initial instances count: 4
+2023-05-12 11:48:00.720  INFO 29136 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application MSCLIENTES with eureka with status UP
+2023-05-12 11:48:00.721  INFO 29136 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1683902880721, current=UP, previous=STARTING]
+2023-05-12 11:48:00.724  INFO 29136 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MSCLIENTES/msclientes:0baad5310e2d42dc94d3e716dd5dd352: registering service...
+2023-05-12 11:48:00.853  INFO 29136 --- [restartedMain] i.g.l.msclientes.MsclientesApplication   : Started MsclientesApplication in 8.806 seconds (JVM running for 9.952)
+2023-05-12 11:48:00.868  INFO 29136 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MSCLIENTES/msclientes:0baad5310e2d42dc94d3e716dd5dd352 - registration status: 204
