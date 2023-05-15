@@ -500,3 +500,14 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 	at java.base/java.lang.Thread.run(Thread.java:1589) ~[na:na]
 
 2023-05-15 15:40:37.935  INFO 40300 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2023-05-15 17:15:25.327  INFO 45860 --- [main] g.l.m.MsavaliadorcreditoApplicationTests : Starting MsavaliadorcreditoApplicationTests using Java 17.0.6 on LuisScudeler with PID 45860 (started by luiss in C:\temp\IntelliJ_Projects\Microservicos_Mensageria_SpringCloud\projeto-cursoms\msavaliadorcredito)
+2023-05-15 17:15:25.329  INFO 45860 --- [main] g.l.m.MsavaliadorcreditoApplicationTests : No active profile set, falling back to 1 default profile: "default"
+2023-05-15 17:15:27.383  INFO 45860 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=f92a613f-e4ad-3136-b0d5-8e04cb7653f6
+2023-05-15 17:15:28.541  INFO 45860 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'msclientes' URL not provided. Will try picking an instance via load-balancing.
+2023-05-15 17:15:28.689  INFO 45860 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'mscartoes' URL not provided. Will try picking an instance via load-balancing.
+2023-05-15 17:15:32.987  INFO 45860 --- [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2023-05-15 17:15:33.112  WARN 45860 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2023-05-15 17:15:33.140  INFO 45860 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 17 endpoint(s) beneath base path '/actuator'
+2023-05-15 17:15:33.238  INFO 45860 --- [main] g.l.m.MsavaliadorcreditoApplicationTests : Started MsavaliadorcreditoApplicationTests in 8.564 seconds (JVM running for 10.212)
+2023-05-15 17:15:34.021  INFO 45860 --- [SpringApplicationShutdownHook] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2023-05-15 17:15:34.024  INFO 45860 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application MSAVALIADORCREDITO with eureka with status DOWN

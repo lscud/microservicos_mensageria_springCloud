@@ -2,7 +2,9 @@ spring:
   application:
     name: mscartoes
   rabbitmq:
-    host: localhost
+#    host: localhost
+#    Depois de conterealizar:
+    host: ${RABBITMQ_SERVER}
     port: 5672
     username: guest
     password: guest
@@ -13,7 +15,9 @@ server:
 eureka:
   client:
     service-url:
-      defaultZone: http://cursoms-eureka-user:ecok-usr-eeuramssur@localhost:8761/eureka #apontando onde esta eureka
+#      defaultZone: http://cursoms-eureka-user:ecok-usr-eeuramssur@localhost:8761/eureka #apontando onde esta eureka
+  #depois de conteinerializar:
+      defaultZone: http://cursoms-eureka-user:ecok-usr-eeuramssur@${EUREKA_SERVER}:8761/eureka #apontando onde esta eureka
   instance:
     instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}} #estou nomeando a isntancia do meu mciroservico. Da forma que foi feito ser� criado nomes randomicos
 

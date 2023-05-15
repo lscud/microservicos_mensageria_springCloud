@@ -335,3 +335,27 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 	at java.base/java.lang.Thread.run(Thread.java:1589) ~[na:na]
 
 2023-05-15 15:40:35.342  INFO 42608 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2023-05-15 17:16:14.597  INFO 44036 --- [main] i.g.l.m.MsclientesApplicationTests       : Starting MsclientesApplicationTests using Java 17.0.6 on LuisScudeler with PID 44036 (started by luiss in C:\temp\IntelliJ_Projects\Microservicos_Mensageria_SpringCloud\projeto-cursoms\msclientes)
+2023-05-15 17:16:14.601  INFO 44036 --- [main] i.g.l.m.MsclientesApplicationTests       : No active profile set, falling back to 1 default profile: "default"
+2023-05-15 17:16:16.794  INFO 44036 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-05-15 17:16:17.097  INFO 44036 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 288 ms. Found 1 JPA repository interfaces.
+2023-05-15 17:16:17.535  INFO 44036 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=10fee7bc-86c8-3268-8e54-905d722d7483
+2023-05-15 17:16:18.485  INFO 44036 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-05-15 17:16:18.888  INFO 44036 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-05-15 17:16:19.016  INFO 44036 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-05-15 17:16:19.154  INFO 44036 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-05-15 17:16:19.464  INFO 44036 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-05-15 17:16:19.723  INFO 44036 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2023-05-15 17:16:20.633  INFO 44036 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-05-15 17:16:20.649  INFO 44036 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-05-15 17:16:21.910  WARN 44036 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-05-15 17:16:26.868  INFO 44036 --- [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2023-05-15 17:16:27.110  WARN 44036 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2023-05-15 17:16:27.131  INFO 44036 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 17 endpoint(s) beneath base path '/actuator'
+2023-05-15 17:16:27.246  INFO 44036 --- [main] i.g.l.m.MsclientesApplicationTests       : Started MsclientesApplicationTests in 13.51 seconds (JVM running for 15.48)
+2023-05-15 17:16:27.726  INFO 44036 --- [SpringApplicationShutdownHook] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2023-05-15 17:16:27.730  INFO 44036 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application MSCLIENTES with eureka with status DOWN
+2023-05-15 17:16:27.744  INFO 44036 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-05-15 17:16:27.745  INFO 44036 --- [SpringApplicationShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2023-05-15 17:16:27.752  INFO 44036 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-05-15 17:16:27.770  INFO 44036 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

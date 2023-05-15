@@ -31,6 +31,8 @@ Authorization Enabled: ON
 
 Valid Redirect URIs: http://localhost:8080
 
+Quando tiver trabalhando com docker
+Frontend URL : http://cursoms-keycloak:8080
 ---
 
 Procurar por "policies" no arquivo que irá exportar para o keycloak e apagar o coteúdo e salvar depois tentar improtar novamente
