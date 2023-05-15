@@ -18,4 +18,4 @@ ARG KEYCLOAK_SERVER=localhost
 ARG KEYCLOAK_PORT=8081
 
 #Executa o arquivo jar
-ENTRYPOINT java -jar app.jar
+ENTRYPOINT java -jar -Dspring.profiles.active=production app.jar

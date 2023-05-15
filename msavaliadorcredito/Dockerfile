@@ -17,4 +17,4 @@ ARG RABBITMQ_SERVER=rabbitmq
 ARG EUREKA_SERVER=teste-eureka
 
 #Executa o arquivo jar
-ENTRYPOINT java -jar app.jar
+ENTRYPOINT java -jar -Dspring.profiles.active=production app.jar

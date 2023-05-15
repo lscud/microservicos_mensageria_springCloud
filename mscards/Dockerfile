@@ -16,5 +16,5 @@ COPY --from=build ./app/target/*.jar ./app.jar
 ARG RABBITMQ_SERVER=rabbitmq
 ARG EUREKA_SERVER=teste-eureka
 
-#Executa o arquivo jar
-ENTRYPOINT java -jar app.jar
+#Executa o arquivo jar e neste caso esta referenciando um profile application diferente do padrão que seria o application.yml
+ENTRYPOINT java -jar -Dspring.profiles.active=production app.jar
