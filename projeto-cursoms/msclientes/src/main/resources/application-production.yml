@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: msclientes
+
+server:
+  port: 0  #dessa forma ser� gerado as instancias em portas aleat�rias. Esse 0 significa que vai subir em uma porta aleat�ria
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://cursoms-eureka-user:ecok-usr-eeuramssur@${EUREKA_SERVER}:8761/eureka #aqui estou dizendo onde esta o eureka onde quero me registrar
+  instance:
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+
+#Expor o actuator
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*' #Todos
+
+#Gerar arquivo de log
+logging:
+  file:
+    name: ./logs/log-file.log
